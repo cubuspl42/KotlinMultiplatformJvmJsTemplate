@@ -40,4 +40,4 @@ jobs:
       - name: Build & test the Gradle project
         uses: gradle/gradle-build-action@v3.5.0
         with:
-          arguments: test
+          arguments: allTests
