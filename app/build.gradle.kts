@@ -1,11 +1,12 @@
+@file:OptIn(ExperimentalKotlinGradlePluginApi::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.allopen)
     alias(libs.plugins.kotlinx.benchmark)
-
-    // Apply the application plugin to add support for building a CLI application
-    application
 }
 
 repositories {
@@ -13,6 +14,14 @@ repositories {
 }
 
 kotlin {
+    compilerOptions {
+        freeCompilerArgs.addAll(
+            listOf(
+                "-Xexpect-actual-classes",
+            )
+        )
+    }
+
     jvm()
 
     js(IR) {
@@ -26,14 +35,12 @@ kotlin {
         }
 
         commonTest.dependencies {
-            implementation(kotlin("test"))
+            implementation(libs.kotlin.test)
         }
 
-        jvmMain.dependencies {
-        }
+        jvmMain.dependencies {}
 
-        jvmTest.dependencies {
-        }
+        jvmTest.dependencies {}
     }
 }
 
