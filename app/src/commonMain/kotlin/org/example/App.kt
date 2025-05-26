@@ -4,9 +4,11 @@
 package org.example
 
 class App {
+    val platform = Platform()
+
     val greeting: String
         get() {
-            return "Hello World!"
+            return "Hello World! [${platform.name}]"
         }
 }
 
