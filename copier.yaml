@@ -1,0 +1,7 @@
+project_owner:
+    type: str
+    help: What will be the GitHub owner of the project's repository?
+
+project_name:
+    type: str
+    help: What is your project name?

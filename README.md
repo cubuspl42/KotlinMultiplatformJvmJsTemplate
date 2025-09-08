@@ -1,34 +1,27 @@
 # KotlinMultiplatformJvmJsTemplate
 
-## Recommended repository setup
+This is a [Copier](https://copier.readthedocs.io/) template for a [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html) GitHub-hosted project supporting JVM and JS targets.
 
-### [Settings](https://github.com/cubuspl42/KotlinMultiplatformJvmJsTemplate/settings)
+## Generating a new project
 
-#### Pull Requests
+Export the `PROJECT_OWNER` variable. This might be put in the user's shell initialization script.
 
-- Allow merge commits: **No** (default: **Yes**)
-- Allow squash merging: **No** (default: **Yes**)
-- Allow rebase merging: **Yes** (default)
-- Allow auto-merge: **Yes** (default: **No**)
-- Automatically delete head branches: **Yes** (default: **No**)
+This variable will be used in the generated URLs.
 
-### [Rulesets](https://github.com/cubuspl42/KotlinMultiplatformJvmJsTemplate/settings/rules)
+```
+export PROJECT_OWNER=cubuspl42
+```
 
-#### Main branch ruleset
+Export the `PROJECT_NAME` variable.
 
-- Ruleset Name: `main`
-- Enforcement status: **Active** (default: **Disabled**)
-- Bypass list: (empty)
-- Target branches:
-  - **Default** (_Include default branch_)
+```
+export PROJECT_NAME=Project1
+```
 
-##### Rules
- 
-###### Branch rules
+Ensure that the current working directory is the desired **parent** directory for the project.
 
-- Require linear history: **Yes** (default: **No**)
-- Require a pull request before merging: **Yes** (default: **No**)
-- Require status checks to pass: **Yes**
-  - Status checks that are required:
-    - `test`
-- Allowed merge methods: **Rebase** (default: **Rebase, Merge, Squash**)
+Generate the project:
+
+```
+copier copy gh:cubuspl42/KotlinMultiplatformJvmJsTemplate $PROJECT_NAME -d project_owner=OWNER -d project_name=PROJECT_NAME --trust
+```
