@@ -1,5 +1,5 @@
 _exclude:
-    LICENSE
+    - LICENSE
 
 project_owner:
     type: str
