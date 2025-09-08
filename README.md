@@ -23,5 +23,5 @@ Ensure that the current working directory is the desired **parent** directory fo
 Generate the project:
 
 ```
-copier copy gh:cubuspl42/KotlinMultiplatformJvmJsTemplate $PROJECT_NAME -d project_owner=OWNER -d project_name=PROJECT_NAME --trust
+copier copy gh:cubuspl42/KotlinMultiplatformJvmJsTemplate $PROJECT_NAME -d project_owner=$PROJECT_OWNER -d project_name=$PROJECT_NAME --trust
 ```
