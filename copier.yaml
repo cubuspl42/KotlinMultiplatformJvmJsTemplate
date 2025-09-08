@@ -1,3 +1,6 @@
+_exclude:
+    LICENSE
+
 project_owner:
     type: str
     help: What will be the GitHub owner of the project's repository?

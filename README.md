@@ -31,3 +31,7 @@ git init && gh repo create $PROJECT_OWNER/$PROJECT_NAME --public --source=.
 ```
 
 Follow the hints in the `Recommended repository setup` section of the generated `README.md` file to configure the created repository reasonably. You may consider removing that section later.
+
+## Licence
+
+The `LICENSE` file describes the license of the template itself. After generating your project, consider adding a `LICENSE` file (or similar) describing the license you chose for your project.
